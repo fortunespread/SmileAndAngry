@@ -1,0 +1,40 @@
+/*
+ #id  , .class
+ */
+
+body {
+    background-color: white;
+}
+
+
+table[border="1"] {
+    border-spacing: 0;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+table[border="1"] td,
+table[border="1"] th {
+    padding: 5px 8px;
+    background: white;
+    border: none;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+table[border="1"] th {
+    background: lightgreen;
+}
+
+.td_1 {
+    text-align:center;
+}
+
+.td_2 {
+    text-align:left;
+}
+
+#title {
+    text-align: center;
+}
