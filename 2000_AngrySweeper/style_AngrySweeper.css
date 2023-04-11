@@ -1,0 +1,110 @@
+/*
+ #id  , .class
+ */
+
+body {
+    background-color: white;
+    font: 32px 'Cooper Black';
+    font-weight: lighter;
+}
+
+button {
+    width: 140px;
+    height: 60px;
+    font-size: 20px;
+    font: 24px 'Cooper Black';
+    cursor: pointer;
+}
+
+
+table[border="1"] {
+    border-spacing: 0;
+    border: none;
+    border-bottom: 0px solid white;
+    border-right: 0px solid white;
+}
+
+table[border="1"] td,
+table[border="1"] th {
+    /* padding: 5px 8px; */
+    /* background: white; */
+    border: none;
+    /* border-top: 1px solid blue;
+    border-left: 1px solid blue; */
+    border: 1px solid #666
+}
+
+
+#main {
+    text-align: center;
+}
+
+
+.container1 {
+    display: flex;
+    text-align: center;
+}
+
+/*
+ ====================
+  field
+ ====================
+*/
+
+.cell {
+    font-size: 20px;
+    width: 24px;
+    height: 24px;
+    background-color: green;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+}
+
+#areaField {
+    padding: 8px;
+}
+
+#fieldTable {
+    /* border-width: 20px; */
+}
+
+
+
+/*
+ ====================
+  info
+ ====================
+*/
+.info00 {
+    text-align: center;
+    width: 160px;
+    background-color: #DFDFDF;
+}
+
+.info01 {
+    text-align: center;
+    width: 160px;
+    background-color: #DFDFDF;
+}
+
+#areaInfo {
+    padding: 8px;
+    font-size: 48px;
+}
+
+/*
+ ====================
+  log
+ ====================
+*/
+#areaLog {
+    /*    display: grid;
+    place-items: center;*/
+    padding: 8px;
+    font-size: 24px;
+    border-color: blue;
+    height: 200px;
+    text-align: left;
+}
