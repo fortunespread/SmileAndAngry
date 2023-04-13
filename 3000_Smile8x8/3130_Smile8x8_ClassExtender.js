@@ -17,7 +17,7 @@ class Info extends InfoBase {
     // attackerNum = { player: 0, comp1: 1, comp2: 2 };
     // attackerName = ["player", "comp1", "comp2"];
     attacker = [];
-    attackerCharaNum = [];
+    attackerStatusNum = [];
     turn;
     me;
     you;
@@ -37,14 +37,26 @@ class Info extends InfoBase {
     }
 
     show(dataToShow) {
-        this.td[1][1].innerText = dataToShow.who[0];
-        this.td[1][2].innerText = dataToShow.who[1];
-        this.td[3][1].innerText = dataToShow.face[0];
-        this.td[3][2].innerText = dataToShow.face[1];
-        this.td[5][1].innerText = dataToShow.count[0];
-        this.td[5][2].innerText = dataToShow.count[1];
-        this.td[6][1].innerText = dataToShow.turn[0];
-        this.td[6][2].innerText = dataToShow.turn[1];
+        // Who
+        this.td[1][1].innerText = attackerName[dataToShow.attacker[0]];
+        this.td[1][2].innerText = attackerName[dataToShow.attacker[1]];
+
+        // Face
+        this.td[3][1].innerText = charaSymbol[dataToShow.attackerStatusNum[0]];
+        this.td[3][2].innerText = charaSymbol[dataToShow.attackerStatusNum[1]];
+
+        // Count;
+        this.td[5][1].innerText = dataToShow.attackerStatusNum[0] === statusNum.smile ? dataToShow.numOfSmile : dataToShow.numOfAngry;
+        this.td[5][2].innerText = dataToShow.attackerStatusNum[1] === statusNum.smile ? dataToShow.numOfSmile : dataToShow.numOfAngry;
+
+        // Turn
+        this.td[6][1].innerText = dataToShow.turn === 0 ? charaSymbol[charaNum.flag] : "";
+        this.td[6][2].innerText = dataToShow.turn === 1 ? charaSymbol[charaNum.flag] : "";
+
+        switch (dataToShow.mode) {
+            case modeNum.setting: { this.eBtn["Start"].disabled = false; break; }
+            case modeNum.playing: { this.eBtn["Start"].disabled = true; break; }
+        }
     }
 
 }

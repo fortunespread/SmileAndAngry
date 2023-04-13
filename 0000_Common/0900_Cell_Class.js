@@ -70,7 +70,7 @@ class CellBase {
 
     // ======== メソッド ========
 
-    showClickCellName(click, pos) {
+    logClickCellName(click, pos) {
         const cellName = this.getCellName(pos);
         logConsole.event(`${cellName} clicked ${click}.`);
     }

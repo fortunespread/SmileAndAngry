@@ -2,8 +2,8 @@
 
 // 配列の要素をkey、配列のindexをvalueとしたobjectを生成し参照渡し
 function arrayToObject(array) {
-    const object={};
-    for (let i=0;i<array.length;i++) object[array[i]]=i;
+    const object = {};
+    for (let i = 0; i < array.length; i++) object[array[i]] = i;
     return object;
 }
 
@@ -61,3 +61,19 @@ const logConsole = {
     event: (str) => console.log(logConsole.yellow + "[Event] " + str),
     alert: (str) => console.log(logConsole.red + "[Alert] " + str)
 }
+
+function sleep(wait) {
+    const startDate = new Date();
+
+    // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
+    while (true) {
+        const currentDate = new Date();
+        if (currentDate - startDate > wait) return;
+    }
+}
+
+const repaint = async () => {
+    for (let i = 0; i < 2; i++) {
+        await new Promise(resolve => requestAnimationFrame(resolve));
+    }
+};

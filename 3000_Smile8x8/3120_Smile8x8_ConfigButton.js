@@ -7,7 +7,7 @@ const configButtonSmile8x8 = {
         event: "click",
         func: () => {
             logConsole.event("Button \"Change 1st attacker\" clicked.");
-            cellSmile8x8.retry();
+            cellSmile8x8.changeAttacker(0);
             fieldSmile8x8.show(cellSmile8x8.dataToShowField);
             infoSmile8x8.show(cellSmile8x8.dataToShowInfo);
         }
@@ -18,18 +18,18 @@ const configButtonSmile8x8 = {
         event: "click",
         func: () => {
             logConsole.event("Button \"Change 2nd attacker\" clicked.");
-            cellSmile8x8.retry();
+            cellSmile8x8.changeAttacker(1);
             fieldSmile8x8.show(cellSmile8x8.dataToShowField);
             infoSmile8x8.show(cellSmile8x8.dataToShowInfo);
         }
     },
-    ChangeFace: {
+    SwapFace: {
         vhOfInfo: [4, 1],
-        text: "Change",
+        text: "Swap",
         event: "click",
         func: () => {
-            logConsole.event("Button \"Change Face\" clicked.");
-            cellSmile8x8.retry();
+            logConsole.event("Button \"Swap Face\" clicked.");
+            cellSmile8x8.swapFace();
             fieldSmile8x8.show(cellSmile8x8.dataToShowField);
             infoSmile8x8.show(cellSmile8x8.dataToShowInfo);
         }
@@ -40,20 +40,18 @@ const configButtonSmile8x8 = {
         event: "click",
         func: () => {
             logConsole.event("Button \"Start\" clicked.");
-            cellSmile8x8.try();
+            cellSmile8x8.start();
             fieldSmile8x8.show(cellSmile8x8.dataToShowField);
             infoSmile8x8.show(cellSmile8x8.dataToShowInfo);
         }
     },
     Restart: {
         vhOfInfo: [7, 2],
-        text: "Restart",
+        text: "Reset",
         event: "click",
         func: () => {
-            logConsole.event("Button \"Restart\" clicked.");
-            // if (!cellSmile8x8.isCleared) return;
-            cellSmile8x8.setInitialStatus();
-            cellSmile8x8.try();
+            logConsole.event("Button \"Resset\" clicked.");
+            cellSmile8x8.reset();
             fieldSmile8x8.show(cellSmile8x8.dataToShowField);
             infoSmile8x8.show(cellSmile8x8.dataToShowInfo);
         }

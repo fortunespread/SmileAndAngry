@@ -71,7 +71,7 @@ class CellAngrySweeper extends CellBase {
 
     // 左クリック処理
     actClickLeftEvent(pos) {
-        this.showClickCellName("left", pos);
+        this.logClickCellName("left", pos);
 
         if (this.isFinished()) {
             this.setInitialStatus();
@@ -83,7 +83,7 @@ class CellAngrySweeper extends CellBase {
 
     // 右クリック処理
     actClickRightEvent(pos) {
-        this.showClickCellName("right", pos);
+        this.logClickCellName("right", pos);
 
         if (this.isFinished()) {
             this.setInitialStatus();

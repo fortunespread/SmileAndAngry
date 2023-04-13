@@ -9,7 +9,7 @@ const configClickEventFieldSmile8x8 = {
         fieldSmile8x8.show(cellSmile8x8.dataToShowField);
         infoSmile8x8.show(cellSmile8x8.dataToShowInfo);
         cellSmile8x8.isClearedAndDoEvent();
-        // switchTextOfBtnRetry(cellSmile8x8.isCleared());
+        logConsole.report("\n"+cellSmile8x8.makeStatusString(cellSmile8x8.status));
     },
 
     clickRightEvent: (pos) => {
