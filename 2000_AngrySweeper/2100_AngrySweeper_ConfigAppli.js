@@ -9,7 +9,7 @@
 // アプリごとに定義
 
 const configCellAngrySweeper = {
-    vSize: 15,
+    vSize: 16,
     hSize: 30,
     direct: 8,
     figOfCell: 2,
@@ -18,7 +18,7 @@ const configCellAngrySweeper = {
 
 const configFieldAngrySweeper = {
     area: "areaFieldAngrySweeper",
-    vSize: 15,
+    vSize: 16,
     hSize: 30
 }
 const configInfoAngrySweeper = {
